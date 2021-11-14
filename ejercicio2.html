@@ -10,31 +10,10 @@
     </head>
     <body>        
         <script>
-            let inicio = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true];
+            let inicio = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true]; // Ingresa los valores del arreglo que se desea ordenar
             console.log("El arreglo original es: ["+inicio+"]");
-            var i=0;
-            var j=0;
-            var k=0;
+            let i=0;
             var numbers = new Array;
-            class Order {
-                value;
-                index;
-                ordenar() {
-                    return "Ordenando arreglo...";
-                    return this.value;
-                }
-
-                constructor(value, index) {
-                    this.value = value;
-                    this.index = index;
-                    console.warn("Nuevo arreglo creado");
-                }
-            };
-            let order = new Order();
-            console.log (order.ordenar());
-
-            var oldValue;
-            var newValue;
             for (let element in inicio) {
                 if (typeof inicio[element] == 'number') {
                     numbers[i] = inicio[element];
@@ -42,16 +21,20 @@
                 }
             }
             console.log("Se limpian los valores diferentes a numéricos y el arreglo resultante es: ["+numbers+"]");
-
-            numbers.forEach(
-                function(value, index) {
-                    let newLength = order.push(value, index);
+            let ordered = numbers.slice();
+            for (let k = 0; k < ordered.length; k++) {
+                for (let j = 0; j < ordered.length; j++) { 
+                    if (j+1 !== ordered.length) {
+                        if ( ordered[j] > ordered[j+1] ) {
+                            let changePlace = ordered[j+1];
+                            ordered[j+1] = ordered[j];
+                            ordered[j] = changePlace;                            
+                        }
+                    }               
                 }
-            )
-            console.log(order);
-
-            
-            
+            }
+            console.log("El nuevo arreglo en orden numérico ascendente es: ["+ordered+"]");
+            alert("El nuevo arreglo en orden numérico ascendente es: ["+ordered+"]");
         </script>
     </body>
 </html>
