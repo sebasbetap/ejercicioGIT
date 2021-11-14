@@ -16,8 +16,23 @@
             var j=0;
             var k=0;
             var numbers = new Array;
-            var newArray = new Array;
-            class Order {};
+            class Order {
+                value;
+                index;
+                ordenar() {
+                    return "Ordenando arreglo...";
+                    return this.value;
+                }
+
+                constructor(value, index) {
+                    this.value = value;
+                    this.index = index;
+                    console.warn("Nuevo arreglo creado");
+                }
+            };
+            let order = new Order();
+            console.log (order.ordenar());
+
             var oldValue;
             var newValue;
             for (let element in inicio) {
@@ -30,10 +45,10 @@
 
             numbers.forEach(
                 function(value, index) {
-                    let newLength = newArray.push(value);
+                    let newLength = order.push(value, index);
                 }
             )
-            console.log(newArray);
+            console.log(order);
 
             
             
