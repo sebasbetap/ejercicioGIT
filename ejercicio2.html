@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ejercicio 2</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>        
+        <script>
+            let inicio = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true]; // Ingresa los valores del arreglo que se desea ordenar
+            console.log("El arreglo original es: ["+inicio+"]");
+            let i=0;
+            var numbers = new Array;
+            for (let element in inicio) {
+                if (typeof inicio[element] == 'number') {
+                    numbers[i] = inicio[element];
+                    i=i+1;
+                }
+            }
+            console.log("Se limpian los valores diferentes a numéricos y el arreglo resultante es: ["+numbers+"]");
+            let ordered = numbers.slice();
+            for (let k = 0; k < ordered.length; k++) {
+                for (let j = 0; j < ordered.length; j++) { 
+                    if (j+1 !== ordered.length) {
+                        if ( ordered[j] > ordered[j+1] ) {
+                            let changePlace = ordered[j+1];
+                            ordered[j+1] = ordered[j];
+                            ordered[j] = changePlace;                            
+                        }
+                    }               
+                }
+            }
+            console.log("El nuevo arreglo en orden numérico ascendente es: ["+ordered+"]");
+            alert("El nuevo arreglo en orden numérico ascendente es: ["+ordered+"]");
+        </script>
+    </body>
+</html>
