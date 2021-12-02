@@ -1,2 +1,2 @@
 # ejercicioGIT - Juan Sebastian Betancur Posada
-Ejercicio GIT para curso TechAcademy
+Ejercicio GIT para curso TechAcademy para el Grupo Bancolombia
