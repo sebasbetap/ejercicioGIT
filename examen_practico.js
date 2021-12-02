@@ -2,7 +2,7 @@
 
 // 1. Colocar las condiciones necesarias para que se cumpla la salida en consola
 
-console.warn('------------------------------------  Ejercicio 1 ----------------------------------------');
+console.warn('\n', '------------------------------------  Ejercicio 1 ----------------------------------------');
 
 var numero1 = 5;
 var numero2 = 8;
@@ -26,7 +26,7 @@ if (numero1+1 < numero2) {
 // (escrito como 5!) es igual a 5! = 5 x 4 x 3 x 2 x 1 = 120
 // Utilizando la estructura crear un script que calcule la factorial de un número entero.
 
-console.warn('------------------------------------  Ejercicio 2 ----------------------------------------');
+console.warn('\n', '------------------------------------  Ejercicio 2 ----------------------------------------');
 
 const numberFactorial = 5; // Ingresar el número al que se le desea calcular su factorial
 
@@ -47,7 +47,7 @@ if (numberFactorial > 0) {
 // y devuelve como resultado una cadena de texto que indica si el número es par o impar.
 // Mostrar por pantalla el resultado devuelto por la función
 
-console.warn('------------------------------------  Ejercicio 3 ----------------------------------------');
+console.warn('\n', '------------------------------------  Ejercicio 3 ----------------------------------------');
 
 var chosenNumber = 8; // Ingresa el número que se desea verificar si es par o impar
 
@@ -65,7 +65,7 @@ function isOdd(value) {
 // es un palíndromo, es decir, si se lee de la misma forma desde la izquierda y desde la
 // derecha. Ejemplo de palíndromo complejo: “La ruta nos aporto otro paso natural”.
 
-console.warn('------------------------------------  Ejercicio 4 ----------------------------------------');
+console.warn('\n', '------------------------------------  Ejercicio 4 ----------------------------------------');
 
 var frase = "La ruta nos aporto otro paso natural"; // Ingresar frase que se desea calcular si es palíndromo o no
 
@@ -83,7 +83,7 @@ function esPalindromo(str) {
 // 5. Definir la siguiente jerarquía de objetos. 
 // Crear los objetos y casos de prueba necesarios para comprobar el correcto funcionamiento de la jerarquía.
 
-console.warn('------------------------------------  Ejercicio 5 ----------------------------------------');
+console.warn('\n', '------------------------------------  Ejercicio 5 ----------------------------------------');
 
 class Persona {
     nombre
@@ -94,22 +94,19 @@ class Persona {
     }
 
     obtDetalles(nombre, edad) {
-        console.log(nombre);
-        console.log(edad);
+        console.log('Se crea la Persona:', '\n', 'Nombre: '+nombre, ', Edad: '+edad+' años');
     }
 }
 
 class Estudiante extends Persona {
     calificacion;
-    constructor (nombre, edad, calificacion) {
+    constructor (nombre, edad) {
         super(nombre, edad);
-        this.calificacion = calificacion;
+        this.calificacion = 'Estudiante sin Calificar aún';
     }
 
-    obtDetalles(nombre, edad, calificacion) {
-        console.log(nombre);
-        console.log(edad);
-        console.log(calificacion);
+    obtDetalles(nombre, edad) {
+        console.log('Se crea el Estudiante:', '\n', 'Nombre: '+nombre, ', Edad: '+edad+' años', ', Calificación: '+this.calificacion);
     }
 }
 
@@ -123,11 +120,8 @@ class Profesor extends Persona {
         this.nivel = "Básico";
     }
 
-    obtDetalles(nombre, edad, asignatura, nivel) {
-        console.log(nombre);
-        console.log(edad);
-        console.log(asignatura);
-        console.log(nivel);
+    obtDetalles(nombre, edad) {
+        console.log('Se crea el Profesor:', '\n', 'Nombre: '+nombre, ', Edad: '+edad+' años', ', Asignatura: '+this.asignatura, ', Nivel: '+this.nivel);
     }
 }
 
@@ -142,12 +136,8 @@ class Grupo {
         this.promedio = promedio;
     }
 
-    addStudent(estudiante) {
-        this.estudiantes.push(estudiante);
-    }
-
     obtDetalles() {
-        console.log(this.profesor);
+        console.log('El Grupo está conformado por: ', '\n', this.profesor);
         console.log(this.estudiantes);
     }
 
@@ -164,29 +154,36 @@ class Grupo {
             promedio = promedio + this.estudiantes[i].calificacion;
         }
         let total = promedio/this.estudiantes.length;
-        console.log('El promedio de calificación del grupo es: '+total);
+        console.log('\n', 'El promedio de calificación del grupo es: '+total);
     }
 }
 
+const sebastian = new Persona('Sebastian', 37);
+sebastian.obtDetalles('Sebastian', 37); // Se prueba método en Clase Persona
+
 const juan = new Estudiante('Juan', 21);
+juan.obtDetalles('Juan', 21); // Se prueba método en Clase Estudiante
+
 const maria = new Estudiante('Maria', 19);
 const camilo = new Estudiante('Camilo', 33);
 const gerardo = new Estudiante('Gerardo', 45);
 const alejandro = new Estudiante('Alejandro', 30);
 const xiomara = new Estudiante('Xiomara', 28);
 
-const ronald = new Profesor('Ronald', 37)
+const ronald = new Profesor('Ronald', 37); // Se crea Objeto tipo Profesor inicializado sólo con nombre y edad
+ronald.obtDetalles('Ronald', 37); // Se prueba método en Clase Profesor
 
-const programacion = new Grupo(ronald, Array(juan, maria, camilo, gerardo, alejandro, xiomara));
-programacion.addStudent(juan, maria, camilo, gerardo, alejandro, xiomara);
-programacion.calificar(programacion);
-programacion.obtDetalles();
-programacion.promediar();
+const estudiantes = new Array(juan, maria, camilo, gerardo, alejandro, xiomara) // Se crea el arreglo estudiantes
+
+const programacion = new Grupo(ronald, estudiantes); // Se crea grupo al que se agrega array de estudiantes
+programacion.calificar(programacion); // Se prueba método que itera y asigna calificación aleatoria
+programacion.obtDetalles(); // Se prueba método que imprime los detalles del profesor y los detalles de todos los estudiantes
+programacion.promediar(); // Se prueba método que arroja el promedio de todas las calificaciones de los estudiantes
 
 // 6. Bonus: Escribe una function que genere todas las posibles combinaciones con las letras de
 // dicho string. (La entrada la puede limitar a 3 letras)
 
-console.warn('------------------------------------  Ejercicio Bonus ----------------------------------------');
+console.warn('\n', '------------------------------------  Ejercicio Bonus ----------------------------------------');
 
 function combinarString(str) {
     if (!Array.isArray(str)) {
@@ -195,4 +192,4 @@ function combinarString(str) {
     return str.reduce((acum, value) => acum.concat(acum.map(data => [value].concat(data))), [[]]).join("")
 }
 
-console.log(combinarString("uno")); // Ingresar palabra o array
+console.log(combinarString("casa")); // Ingresar palabra o array
