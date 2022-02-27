@@ -272,7 +272,6 @@ body {
 #seccionHerramientas >div >p {
     font-size: 18px;
     font-family: 'Hind', sans-serif;
-    margin: 0;
     color: #002b39;
     margin: 0;
     text-align: center;
@@ -283,12 +282,104 @@ body {
     margin: auto;
 }
 
-.process {
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr 3fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+.header3{
+    margin-top: 150px;
 }
 
-#seccion3 > div > img{
-    max-width: 600px;
+.process {
+    padding-top: 4.4vw!important;
+    margin-top: -3.7vw!important;
+    margin-right: auto!important;
+    margin-bottom: 30px;
+    margin-left: auto!important;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    max-height: 320px;
+    max-width: 862px;
+    position: relative;
+    align-self: center;
+    background-image: url(img/Rectangulo-7185403x.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: 50% 55%;
+}
+
+#number1 {
+    width: 46.25px;
+    height: 35px;
+    grid-column: 1;
+    grid-row: 1;
+}
+#number2 {
+    width: 57.5px;
+    height: 35px;
+    grid-column: 3;
+    grid-row: 1;
+}
+#number3 {
+    width: 56.88px;
+    height: 35px;
+    grid-column: 5;
+    grid-row: 1;
+}
+
+.number {
+    display: block;
+    margin: auto;    
+}
+
+#account {
+    width: 200px;
+    height: 200px;
+    grid-column: 1;
+    grid-row: 2;
+}
+#profile {
+    width: 200px;
+    height: 200px;
+    grid-column: 3;
+    grid-row: 2;
+}
+#course {
+    width: 200px;
+    height: 200px;
+    grid-column: 5;
+    grid-row: 2;
+}
+
+#crea {
+    color: #002b39;
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Hind', sans-serif;
+    grid-column: 1;
+    grid-row: 3;
+}
+#completa {
+    color: #002b39;
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Hind', sans-serif;
+    grid-column: 3;
+    grid-row: 3;
+}
+#online {
+    color: #002b39;
+    margin: 0;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Hind', sans-serif;
+    grid-column: 5;
+    grid-row: 3;
+}
+
+#backgroundLine {
+    margin: auto;
+    width: 600px;
+    z-index: -1;
+    grid-column: 1 / 5;
+    grid-row: 2;
 }
