@@ -54,6 +54,13 @@ button:hover {
 body {
     margin: 0;
 }
+footer {
+    padding: 40px 140px !important;
+    background-image: linear-gradient(90deg,#1489ff 0%,#0073e6 100%)!important;
+    background-repeat: no-repeat;
+    background-color: #1489ff!important;
+    background-size: 100% !important;
+}
 
 #seccion1 {
     display: block;
@@ -196,40 +203,11 @@ body {
     color: blue;
 }
 
-.cuadricula {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    max-width: 600px;
-    margin: auto;
-    gap: 20px;
-}
-
-.tarjetaCaracteristica {
-    text-align: center;
-    justify-content: center;
-    width: 90%;
-    color: #002b39 !important;
-    margin: 15px 6% !important;
-    padding: 22px 5% !important;
-    border-radius: 10px !important;
-    box-shadow: 0 20px 15px 0 rgba(26, 72, 100, 0.1) !important;
-    border: solid 1px #c3d5e0 !important;
-    background-image: linear-gradient(to bottom, #fff, #fff 78%, #f0feff) !important;
-}
-
 #tools {
     display: block;
     margin: auto;
     max-width: 548px;
     margin-top: 75px;
-}
-
-.negritas {
-    font-weight: bolder;
-}
-
-#ultimoBoton {
-    margin-top: 50px;
 }
 
 #seccionHerramientas {
@@ -335,6 +313,11 @@ body {
     grid-column: 1;
     grid-row: 2;
 }
+
+.processLogos:hover {
+    cursor: pointer;
+}
+
 #profile {
     width: 200px;
     height: 200px;
@@ -376,10 +359,132 @@ body {
     grid-row: 3;
 }
 
-#backgroundLine {
+#seccion4 {
+    margin-top: 80px !important;
+    background-position: top center !important;
+    background-image: url(img/Enmascarar-grupo-285@3x-scaled.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 150px;
+}
+
+#header4 {
+    padding-top: 150px;
+}
+
+.cuadricula {
+    display: grid;
+    width: 960px;
     margin: auto;
-    width: 600px;
-    z-index: -1;
-    grid-column: 1 / 5;
-    grid-row: 2;
+    margin-top: 35px !important;
+    justify-items: center;
+    grid-template-columns: 33.3% 33.3% 33.3% !important;
+}
+
+.negritas {
+    font-size: 16px;
+    font-family: 'Hind-Bold';
+    font-weight: bolder;
+}
+
+.tarjetaCaracteristica {
+    display: grid !important;
+    width: 80%;
+    font-family: 'Hind', sans-serif;
+    color: #002b39 !important;
+    word-break: break-all;
+    margin: 15px 6% !important;
+    padding: 22px 5% !important;
+    object-fit: contain !important;
+    border-radius: 10px !important;
+    box-shadow: 0 20px 15px 0 rgba(26, 72, 100, 0.1) !important;
+    border: solid 1px #c3d5e0;
+    background-image: linear-gradient(to bottom, #fff, #fff 78%, #f0feff) !important;
+}
+
+.tarjetaCaracteristica:hover {
+    cursor: pointer;
+    border: solid 1px #1489ff;
+}
+
+.tarjetaCaracteristica >img {
+    justify-self: center;
+    margin: 0;
+    margin-bottom: 5px;
+}
+.tarjetaCaracteristica >p {
+    justify-self: center;
+    margin: 0;
+    text-align: center;
+    line-height: 20px;
+}
+#ultimoBoton {
+    margin-top: 60px;
+}
+
+#barFooter{
+    display: grid;
+    grid-template-columns: 2fr;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: solid 1px white;
+}
+
+#logoFooter {
+    max-width: 755.39px;
+    grid-column: 1;
+}
+
+.redes {
+    padding-top: 29px;
+    width: 100%;
+    max-width: 100%;
+    grid-column: 2;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.redes >img{
+    width: 25px;
+    height: 25px;
+    padding: unset !important;
+    padding-left: 25px !important;
+}
+
+#terms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 42px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.last {
+    display: grid;
+    width: 100%;
+    grid-column: 2;
+    margin: auto !important;
+    margin-right: 0px !important;
+    right: 0px;
+    grid-template-columns: auto auto auto;
+    font-size: 14px !important;
+    justify-items: end;
+}
+
+.last >p {
+    margin: 0;
+    line-height: 1em;
+    font-weight: 500;
+    font-style: normal;
+    color: #fff !important;
+    font-size: 14px !important;
+    font-family: 'Hind', sans-serif;
 }
