@@ -520,13 +520,15 @@ footer {
         margin-left: 35%;
         justify-self: center;
         align-self:center;
+        margin-bottom: 50px !important;
     }
 
     #tools {
+        position: relative;
         display: block;
         margin: auto;
         max-width: 650px;
-        margin-top: 55%;
+        margin-top: 355px;
         margin-left: 10%;
     }
 
@@ -666,7 +668,6 @@ footer {
 
     .line {
         max-width: 763px;
-        width: fit-content;
         height: 10px;
     }
     
