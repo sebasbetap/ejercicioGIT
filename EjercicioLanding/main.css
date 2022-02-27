@@ -427,7 +427,72 @@ footer {
     .tablet {
         display: none !important;
     }
+
+    #barFooter{
+        display: grid;
+        grid-template-columns: 2fr;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: solid 1px white;
+    }
     
+    #logoFooter {
+        max-width: 755.39px;
+        grid-column: 1;
+    }
+    
+    .redes {
+        padding-top: 29px;
+        width: 100%;
+        max-width: 100%;
+        grid-column: 2;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .redes >img{
+        width: 25px;
+        height: 25px;
+        padding: unset !important;
+        padding-left: 25px !important;
+    }
+    
+    #terms {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 42px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .last {
+        display: grid;
+        width: 100%;
+        grid-column: 2;
+        margin: auto !important;
+        margin-right: 0px !important;
+        right: 0px;
+        grid-template-columns: auto auto auto;
+        font-size: 14px !important;
+        justify-items: end;
+    }
+    
+    .last >p {
+        margin: 0;
+        line-height: 1em;
+        font-weight: 500;
+        font-style: normal;
+        color: #fff !important;
+        font-size: 14px !important;
+        font-family: 'Hind', sans-serif;
+    }    
 }
 
 @media only screen and (min-width: 50px) and (max-width: 763px) {
@@ -523,6 +588,15 @@ footer {
         margin-bottom: 50px !important;
     }
 
+    #seccion2{
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 763px;
+        margin-top: 7rem!important;
+        margin-bottom: 10rem!important;   
+    }
+
     #tools {
         position: relative;
         display: block;
@@ -592,11 +666,18 @@ footer {
     .button2 {
         margin-top: 50px;
         margin-left: 35%;
+        display: block;
+        align-self: center;
+        justify-self: center;
     }
 
     #seccion3 {
         display: block;
-        margin: auto;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 763px;
+        margin-top: 7rem!important;
+        margin-bottom: 10rem!important;   
     }
     
     .header3{
@@ -660,10 +741,24 @@ footer {
         margin-bottom: 50px;        
     }
 
+    .interlude {
+        margin-top: 80px !important;
+        position: relative;
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 763px;
+    }
+
     #seccion4 {
         margin-top: 80px !important;
         position: relative;
-        padding-bottom: 150px;
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 763px;
+        margin-top: 7rem!important;
+        margin-bottom: 10rem!important; 
     }
 
     .line {
@@ -729,71 +824,83 @@ footer {
     }
     #ultimoBoton {
         margin-top: 60px;
+        display: block;
+        align-self: center;
+        justify-self: center;
     }
-}
 
-#barFooter{
-    display: grid;
-    grid-template-columns: 2fr;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 20px;
-    padding-left: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    border-bottom: solid 1px white;
-}
+    .section5{
+        margin-top: 80px !important;
+        position: relative;
+        display: block;
+        margin-left: 0px;
+        margin-right: 0px;
+        max-width: 763px;
+        width: fit-content;
+    }
 
-#logoFooter {
-    max-width: 755.39px;
-    grid-column: 1;
-}
-
-.redes {
-    padding-top: 29px;
-    width: 100%;
-    max-width: 100%;
-    grid-column: 2;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.redes >img{
-    width: 25px;
-    height: 25px;
-    padding: unset !important;
-    padding-left: 25px !important;
-}
-
-#terms {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding-top: 42px;
-    padding-right: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    width: 100%;
-    max-width: 100%;
-}
-
-.last {
-    display: grid;
-    width: 100%;
-    grid-column: 2;
-    margin: auto !important;
-    margin-right: 0px !important;
-    right: 0px;
-    grid-template-columns: auto auto auto;
-    font-size: 14px !important;
-    justify-items: end;
-}
-
-.last >p {
-    margin: 0;
-    line-height: 1em;
-    font-weight: 500;
-    font-style: normal;
-    color: #fff !important;
-    font-size: 14px !important;
-    font-family: 'Hind', sans-serif;
+    #barFooter{
+        display: grid;
+        grid-template-columns: 2fr;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 20px;
+        padding-left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: solid 1px white;
+    }
+    
+    #logoFooter {
+        grid-column: 1;
+    }
+    
+    .redes {
+        padding-top: 29px;
+        width: 100%;
+        max-width: 100%;
+        grid-column: 2;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .redes >img{
+        width: 25px;
+        height: 25px;
+        padding: unset !important;
+        padding-left: 25px !important;
+    }
+    
+    #terms {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 42px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .last {
+        display: grid;
+        width: 100%;
+        grid-column: 2;
+        margin: auto !important;
+        margin-right: 0px !important;
+        right: 0px;
+        grid-template-columns: auto auto auto;
+        font-size: 14px !important;
+        justify-items: end;
+    }
+    
+    .last >p {
+        margin: 0;
+        line-height: 1em;
+        font-weight: 500;
+        font-style: normal;
+        color: #fff !important;
+        font-size: 14px !important;
+        font-family: 'Hind', sans-serif;
+    }
 }
