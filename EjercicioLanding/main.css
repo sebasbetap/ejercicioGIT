@@ -39,8 +39,10 @@ button {
     font-size: 18px;
     font-family: 'Hind',Helvetica,Arial,Lucida,sans-serif!important;
     font-weight: 700!important;
-    background-image: linear-gradient(0deg,#007fff 0%,#00b1ff 100%);
+    background-color: #007fff;
+    /* background-image: linear-gradient(0deg,#007fff 0%,#00b1ff 100%); */
     cursor: pointer;
+    transition: background-color 5s;
 }
 
 button:hover {
@@ -61,6 +63,38 @@ footer {
     background-color: #1489ff!important;
     background-size: 100% !important;
 }
+
+.slide-right {
+	-webkit-animation: slide-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-right 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-iteration-count: 3;
+}
+
+@-webkit-keyframes slide-right {
+    0% {
+        opacity: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    }
+    100% {
+        opacity: 1;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+    }
+}
+@keyframes slide-right {
+    0% {
+        opacity: 0;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    }
+    100% {
+        opacity: 1;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+    }
+}
+  
 
 #seccion1 {
     display: block;
