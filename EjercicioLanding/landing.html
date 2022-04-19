@@ -37,7 +37,7 @@
             <h5 id="career2" class="tablet">Psicología</h5>         
         </div>
         <img class="setRatios" src="img/ratios1.png" alt="">
-        <img class="arrow" src="img/Grupo8810@3x.webp" alt="">
+        <img class="arrow" src="img/Grupo8810@3x.webp" alt="" onclick="derecha()">
     </div>
 </div>
 <div id="seccion2">
@@ -166,5 +166,11 @@
         </div>
     </div>
 </footer>
+<script>
+    function derecha() {
+        document.getElementById('tarjeta').classList.add('slide-right');      
+        document.getElementById('slide-right').style.animationPlayState = 'running';   
+    }
+</script>
 </body>
 </html>
