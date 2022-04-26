@@ -15,7 +15,7 @@ const CounterFunction = () => {
         return () => {
             console.log("Finished")
         }
-    },[count]);
+    }, [count]);
 
     return (
         <div>

@@ -1,9 +1,9 @@
-import { CounterFunction} from "./components";
+import { FormControlled } from "./components";
 
 function App() {
 
   return (
-    <CounterFunction/>
+    <FormControlled/>
   );
 }
 
