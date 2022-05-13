@@ -8,7 +8,6 @@ import {
   Info,
   Quantity,
   Subtotal,
-  Plink,
 } from './styles';
 
 function Cart() {

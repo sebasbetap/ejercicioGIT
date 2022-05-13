@@ -53,6 +53,7 @@ export const Unit = styled.li`
     border-radius: 5px;
     display: flex;
     align-items: center;
+    cursor: pointer;
   }
 
   div {
