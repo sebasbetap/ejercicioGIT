@@ -69,3 +69,32 @@ export const Subtotal = styled.div`
     margin-right: 10px;
   }
 `;
+
+export const Total = styled.p`
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+
+  strong {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.02em;
+    color: #000000;
+    margin-right: 30px;
+    margin-left: 20px;
+  }
+
+  p {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #999999;
+    grid-column: 4;
+    margin-top: 30px;
+  }
+`;
